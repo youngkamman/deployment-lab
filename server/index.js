@@ -8,11 +8,11 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../index.html'))
 })
 
-app.get('/css', function(req, res) {
-    res.sendFile(path.join(__dirname, '../styles.css'))
-})
+// app.get('/css', function(req, res) {
+//     res.sendFile(path.join(__dirname, '../styles.css'))
+// })
 
- app.use('/', express.static(path.join(__dirname, '../styles.css')))
+ app.use('/js', express.static(path.join(__dirname, '../styles.css')))
 
  app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, './server/index.js'))
