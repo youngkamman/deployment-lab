@@ -14,7 +14,9 @@ app.get('/css', function(req, res) {
 
  app.use('/', express.static(path.join(__dirname, '../styles.css')))
 
-
+ app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, './server/index.js'))
+  })
 const port = process.env.PORT  || 4005
 
 app.listen(port, () => {
